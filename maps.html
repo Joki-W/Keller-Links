@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map Randomizer</title>
+</head>
+<body>
+
+<a href="index.html">Zurück zu den Links</a>
+<br><br>
+
+<h2>Minecraft Xbox 360 Elytra Race</h2>
+<button onclick="getRandomMinecraftMap()">Random Map</button>
+&nbsp;&nbsp;
+<strong id="minecraft-result"></strong>
+
+<br><br>
+
+<h2>Super Mario Party Jamboree</h2>
+<button onclick="getRandomJamboreeMap()">Random Map</button>
+&nbsp;&nbsp;
+<strong id="jamboree-result"></strong>
+
+<script>
+    const minecraftMaps = [
+        "Cavern",
+        "Temple",
+        "Yeti",
+        "Kraken",
+        "Dragon",
+        "Shrunk",
+        "Body",
+        "Mobs",
+        "Canyon",
+        "Excalibur",
+        "Icarus",
+        "Celts"
+    ];
+
+    const jamboreeMaps = [
+        "Mega Wiggler's Tree Party",
+        "Roll'em Raceway",
+        "Goomba Lagoon",
+        "Mall",
+        "King Bowser's Keep",
+        "Mario's Rainbow Castle (N64)",
+        "Western Land (N64)"
+    ];
+
+    function getRandomMinecraftMap() {
+        const randomIndex = Math.floor(Math.random() * minecraftMaps.length);
+        document.getElementById('minecraft-result').textContent = minecraftMaps[randomIndex];
+    }
+
+    function getRandomJamboreeMap() {
+        const randomIndex = Math.floor(Math.random() * jamboreeMaps.length);
+        document.getElementById('jamboree-result').textContent = jamboreeMaps[randomIndex];
+    }
+</script>
+
+</body>
+</html>

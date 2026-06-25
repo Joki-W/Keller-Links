@@ -21,6 +21,13 @@
 &nbsp;&nbsp;
 <strong id="jamboree-result"></strong>
 
+<br><br>
+
+<h2>Wii Golf Map</h2>
+<button onclick="getRandomGolfMap()">Random Map</button>
+&nbsp;&nbsp;
+<strong id="golf-result"></strong>
+
 <script>
     const minecraftMaps = [
         "Cavern",
@@ -47,6 +54,13 @@
         "Western Land (N64)"
     ];
 
+    const golfMaps = [
+        "Resort A",
+        "Resort B",
+        "Classic A",
+        "Classic B"
+    ];
+
     function getRandomMinecraftMap() {
         const randomIndex = Math.floor(Math.random() * minecraftMaps.length);
         document.getElementById('minecraft-result').textContent = minecraftMaps[randomIndex];
@@ -55,6 +69,11 @@
     function getRandomJamboreeMap() {
         const randomIndex = Math.floor(Math.random() * jamboreeMaps.length);
         document.getElementById('jamboree-result').textContent = jamboreeMaps[randomIndex];
+    }
+
+    function getRandomGolfMap() {
+        const randomIndex = Math.floor(Math.random() * golfMaps.length);
+        document.getElementById('golf-result').textContent = golfMaps[randomIndex];
     }
 </script>
 
